@@ -4,102 +4,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <title>Beautiful Blog</title>
+  <title>Study Blog</title>
   <style>
     body {
       background-color: #f8f9fa;
-      color: #333;
+      font-family: Arial, sans-serif;
     }
-    .navbar {
-      margin-bottom: 30px;
+    .container {
+      margin-top: 30px;
     }
-    .blog-title {
-      font-size: 2.5rem;
+    .subject-container {
       margin-bottom: 20px;
-    }
-    .blog-post {
-      margin-bottom: 40px;
       padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .blog-post img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
+    .subject-header {
+      cursor: pointer;
     }
-    .blog-post-title {
-      font-size: 1.75rem;
-      margin-top: 20px;
-      margin-bottom: 15px;
+    .syllabus-content {
+      display: none;
+      margin-top: 10px;
     }
-    .blog-post-meta {
-      color: #6c757d;
-      margin-bottom: 15px;
+    .subject-header:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<header id="header">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">My Blog</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+<div class="container">
+  <h1 class="text-center">Study Blog</h1>
+
+  <!-- Semester 1 -->
+  <div class="subject-container">
+    <div class="subject-header" data-toggle="collapse" data-target="#semester1">
+      <h2>Semester 1</h2>
     </div>
-  </nav>
-</header>
-
-<main class="container">
-  <div class="blog-title text-center">Welcome to My Blog</div>
-
-  <div class="blog-post">
-    <img src="https://via.placeholder.com/900x300" alt="Post Image">
-    <h2 class="blog-post-title">First Blog Post</h2>
-    <p class="blog-post-meta">May 26, 2024 by <a href="#">Author</a></p>
-    <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
+    <div id="semester1" class="collapse syllabus-content">
+      <ul class="list-unstyled">
+        <li>
+          <h4>Mathematics</h4>
+          <ul>
+            <li>Algebra</li>
+            <li>Calculus</li>
+            <li>Trigonometry</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Physics</h4>
+          <ul>
+            <li>Mechanics</li>
+            <li>Thermodynamics</li>
+            <li>Waves</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Computer Science</h4>
+          <ul>
+            <li>Programming Basics</li>
+            <li>Data Structures</li>
+            <li>Algorithms</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="blog-post">
-    <img src="https://via.placeholder.com/900x300" alt="Post Image">
-    <h2 class="blog-post-title">Second Blog Post</h2>
-    <p class="blog-post-meta">May 26, 2024 by <a href="#">Author</a></p>
-    <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
+  <!-- Semester 2 -->
+  <div class="subject-container">
+    <div class="subject-header" data-toggle="collapse" data-target="#semester2">
+      <h2>Semester 2</h2>
+    </div>
+    <div id="semester2" class="collapse syllabus-content">
+      <ul class="list-unstyled">
+        <li>
+          <h4>Chemistry</h4>
+          <ul>
+            <li>Organic Chemistry</li>
+            <li>Inorganic Chemistry</li>
+            <li>Physical Chemistry</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Biology</h4>
+          <ul>
+            <li>Cell Biology</li>
+            <li>Genetics</li>
+            <li>Evolution</li>
+          </ul>
+        </li>
+        <li>
+          <h4>English</h4>
+          <ul>
+            <li>Literature</li>
+            <li>Grammar</li>
+            <li>Writing Skills</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="blog-post">
-    <img src="https://via.placeholder.com/900x300" alt="Post Image">
-    <h2 class="blog-post-title">Third Blog Post</h2>
-    <p class="blog-post-meta">May 26, 2024 by <a href="#">Author</a></p>
-    <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
-  </div>
-</main>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('.subject-header').click(function() {
+      $(this).next('.syllabus-content').collapse('toggle');
+    });
+  });
+</script>
 
 </body>
 </html>
